@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using auth0_test.web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace auth0_test.web.Controllers
@@ -18,6 +19,7 @@ namespace auth0_test.web.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
